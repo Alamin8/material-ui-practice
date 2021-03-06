@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Chart from './Components/Chart/Chart';
 import News from './Components/News/News';
 function App() {
   const [articles, setArticles]=useState([]);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div>
+      <Chart></Chart>
       {
         articles.map(article=><News article={article}></News>)
       }
